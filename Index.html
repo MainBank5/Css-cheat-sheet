@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+    <h1 class="short">My Website</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Tempore quas delectus quod vitae, dolorem provident sint perferendis
+        autem excepturi cumque, cupiditate in voluptas laudantium ullam iste voluptatibu
+        impedit sapiente vero!
+    </p>
+
+    <h2 class="shorter">About Me</h2>
+    <img src="/css/meglo.jpg" height="500" width="500">
+    <p>I'm Web developer, who's constantly learning and improving his skills. I know it'll pay off.
+       Here is my techstack:
+        <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>Technical writing</li>
+        </ul>
+    </p>
+
+    <h3 id="contact-us">Contact Us</h3>
+    <form>
+        <fieldset>
+            <legend class="legend">Enter Your Details</legend>
+          <div>
+            <label>Enter your name</label>
+            <input type="text" name="firstname" placeholder="enter your name">
+          </div>
+          <br>
+          <div>
+            <label>Enter your email</label>
+            <input type="email" name="email"  placeholder="your email">
+          </div>
+          <br>
+          <div>
+            <label>Message</label>
+            <textarea placeholder="leave me a message"></textarea>
+          </div>
+          <br>
+          <div>
+            <input type="submit" name="submit">
+          </div>
+        </fieldset>
+    </form>
+    <br>
+<!--I added this heading to illustrate specifity when using selectors
+The more specific select overwrites the general selector.e.g an id selector in css overwrites a class selector
+which also overwrites an element selector. Inline css overwrites external css rules-->
+    <hr>
+    <h3>Hobbies</h3>
+    <P>I enjoy watching movies and spending time with my family</P>
+    <br>
+    <h4>My Blogs</h4>
+    <small>Published by Eliud on August</small>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure tempore, natus alias officiis
+      voluptatem excepturi minima cupiditate nulla autem soluta! Ratione error eaque laborum temporibus
+      expedita velit incidunt voluptatem ut.<br>
+      <a href="links.html">Read more...</a>
+    </p>
+    <br>
+    <h5>Years of Experience</h5>
+    <p>This is my first web in my first year of learning
+      check this out, its really <a href="links.html" id="trial">fun pseudoselector here</a> when you notice it
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil sit vitae similique iure, aliquam,
+      qui <em class="highlight">laudantium accusamus</em> porro tenetur itaque ipsa, ea temporibus aut ad quae! Nostrum voluptatum
+      saepe officia.
+    </p>
+</body>
+</html>
