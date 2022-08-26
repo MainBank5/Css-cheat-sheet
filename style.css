@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(204, 195, 230);
+    background-color: rgb(235, 220, 12);
 }
 .short{
     color: rgb(15, 221, 94);
@@ -29,6 +29,10 @@ li:first-child{
     color: beige;
     font-style: italic;
 }
+
+li:nth-child(3) {
+    color: rgb(48, 10, 216);
+}
 /* a:hover must come last after a:link a:visited*/
 
 a:link{
@@ -40,7 +44,105 @@ a:visited{
 a:hover{
     color: rgb(241, 15, 211);
 }
+/*pseudo class selector. highlight is our class*/
 em.highlight:hover {
     color: antiquewhite;
     font-size: 35px;
+}
+/*attribute selectors*/
+/*this [name of the attribute] selects all attributes whose name is brackets*/
+[data-type] {
+    color: rgb(9, 31, 230);
+    font-size: 30px;
+}
+
+/*this selects all atributes whose value is EXACTLY sixthead*/
+[target='sixthead'] {
+    font-size:xx-large;
+    color: rgb(11, 123, 197);
+}
+/*targets all <a> element with the attributed whose value is EXACTLY twitter*/
+/*this styling selection is more specific which is the other a element styling don't work here*/
+a[link='twitter'] {
+    color: blue;
+    font-style: italic
+}
+a[link='facebook'] {
+    color: #FE01FC;
+    font-style: italic;
+}
+/*selects the attribiute of element a whose value is among the whitespace-spaced series of words*/
+a[prof~='professional'] {
+    color: #aa143a;
+    font-style: oblique;
+}
+li:only-child {
+    color: #aa143a;
+}
+
+/* :focus pseudo class selector. styling input for example*/
+
+input:focus{
+    background-color: yellow;
+}
+
+/*pseudo element selector use double colons. They're used to style specific parts of an element*/
+p::first-line{
+    color: red;
+    font-variant:initial;
+}
+
+p::first-letter {
+    color: #FE01FC;
+    font-size: xx-large;
+}
+h3::first-letter {
+    color: rgba(233, 146, 15, 0.651);
+    font-family: 'Courier New', Courier, monospace;
+}
+/*combining html class with pseudo element selector*/
+p.animals::first-letter{
+    color: blue;
+    font-size: xx-large;
+}
+
+/*::before and ::after pseudo elements used to insert content(gif or text) before and after an element*/
+.short::before {
+    content: "This is ";
+}
+
+h1.short::after {
+    content:"";
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: #aa143a;
+}
+/*the ::marker pseudo element does need to be preceeded by a class or element selector. its a stand alone*/
+/*it styles all markers of list items*/
+
+::marker {
+    color: rgba(129, 10, 240, 0.411);
+    font-size: xx-large;
+}
+/*::selection pseudo element styles any portion an element select by the user*/
+/* similar to marker, selection isn't precedented by an element or class selector*/
+::selection {
+    color: rgba(228, 8, 8, 0.959);
+    background-color: rgba(0, 217, 255, 0.87);
+}
+
+/*fonts styling*/
+[fonts='styling'] {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline wavy blue;
+    color: rgb(23, 121, 206);
+}
+
+h2 {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 4em;
 }
