@@ -21,7 +21,7 @@
     <img src="/css/meglo.jpg" height="500" width="500" alt="upclose selfie">
     <p>I'm Web developer, who's constantly learning and improving his skills. I know it'll pay off.
        Here is my techstack:
-        <ul>
+        <ul class="tech">
             <li>HTML5</li>
             <li>CSS</li>
             <li>Javascript</li>
@@ -112,5 +112,62 @@ which also overwrites an element selector. Inline css overwrites external css ru
       delectus harum reiciendis beatae commodi voluptates rerum accusantium quos error?
       Molestiae soluta eos tempore unde tenetur.
     </p>
+
+    <div class="box">
+      <p>This is a descedant</p>
+    </div>
+    <br>
+    <div>
+      <ul>
+        <li>Milk</li>
+        <li>flour</li>
+          <ol>
+            <li>shame</li>
+            <li>effort</li>
+            <li>grit</li>
+          </ol>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <p>This is a direct child </p>
+      <p>This is a direct child no.2</p>
+      <p>This is a direct child no.3</p>
+      <section>
+        <p>This is not a direct child. its a descedant/grandchild. It wont be styled in the same way</p>
+      </section>
+    </div>
+    <p> this is outside of the p selectors</p>
+    <p> this one too is outside of the selectors' scope</p>
+    <br>
+    <section>
+      <p>This is a direct child </p>
+      <p>This is a direct child no.2</p>
+      <p>This is a direct child no.3</p>
+      <article>
+        <p>This is not a direct child. its a descedant/grandchild.</p>
+      </article>
+    </section>
+    <br>
+    <p> this is outside the style selector</p>
+    <p> this paragraph too doesnt get affected by styling</p>
+
+    <hr>
+    <h5> Heading 5</h5>
+    <p> this is adjacent</p>
+    <p> this is not adjacent</p>
+    <br>
+    <h7>heading 7</h7>
+    <p>this immediately after</p>
+    <p> this not immediately after but will get styled</p>
+
+    <div>
+      <h8> heading 8</h8>
+      <p>mock paragraph</p>
+      <p>test paragrahp</p>
+    </div>
+
+
+
 </body>
 </html>

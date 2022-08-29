@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(235, 220, 12);
+    background-color: rgb(11, 228, 217);
 }
 .short{
     color: rgb(15, 221, 94);
@@ -18,11 +18,11 @@ h3{
     color: rgb(16, 233, 88);
 }
 h4, small{
-    color: rgb(180, 123, 38);
+    color: rgb(38, 180, 81);
 }
 /* this is a pseudo-selector notice that you put a colon after selecting*/
 h5:hover{
-    color: rgb(250, 250, 11);
+    color: rgb(221, 221, 10);
 }
 
 li:first-child{
@@ -116,14 +116,15 @@ h1.short::after {
     display: block;
     width: 200px;
     height: 100px;
-    background-color: #aa143a;
+    background-color: #c4c409;
 }
 /*the ::marker pseudo element does need to be preceeded by a class or element selector. its a stand alone*/
 /*it styles all markers of list items*/
 
 ::marker {
     color: rgba(129, 10, 240, 0.411);
-    font-size: xx-large;
+    font-size: x-large;
+    
 }
 /*::selection pseudo element styles any portion an element select by the user*/
 /* similar to marker, selection isn't precedented by an element or class selector*/
@@ -141,8 +142,68 @@ h1.short::after {
     text-decoration: underline wavy blue;
     color: rgb(23, 121, 206);
 }
-
+/*external font styling*/
 h2 {
     font-family: 'Alumni Sans Pinstripe', sans-serif;
     font-size: 4em;
+}
+
+p {
+    border-style:solid;
+    text-shadow: 40px;
+    padding: 1rem;
+}
+p.pig::first-letter{
+   color: #FE01FC;
+}
+
+/* combinator selector. Descedant combinator */
+/* it styles the ALL second selectors which are the descedant and children of the first selector .
+Its an all inclusive styler*/
+.box p {
+    color: red;
+}
+
+section p {
+    background-color: cadetblue;
+}
+
+/* child combinator - its used to style DIRECT children of the first selector element.
+The selectors are seperated by this > sign. The first selector is the parent
+the second selector is the direct child. Descedants aren't styled i.e the grandchildren*/
+ul > li {
+    border-style: ridge;
+    padding: 1ex;
+    
+}
+
+div > p {
+    background-color: yellow;
+}
+
+/* adjacent sibling combinator. Styles the second selector that comes IMMEDIATELY after the end of first selector.
+this means all other elements that come after won't be styled */
+h1 + p {
+    background-color: white;
+    font-weight: 900;
+    font-style: italic;
+}
+
+h5 + p {
+    background-color: rgba(84, 238, 13, 0.959);
+}
+
+/* general combinator. works like adjacent sibling only that it selects/styles all elements that come after
+the first selector, not just the one that comes immediately after */
+
+h7 ~ p {
+    background-color: peru;
+    font-weight: 900;
+    font-stretch: expanded;
+}
+
+img {
+    border: 30px;
+    border-style: solid;
+    padding:0%;
 }
